@@ -5,7 +5,6 @@ import useNavigator from "@saleor/hooks/useNavigator";
 import {
   makeStyles,
   SaleorTheme,
-  Sidebar,
   SidebarDrawer,
   useActionBar,
   useBacklink,
@@ -28,6 +27,7 @@ import AppChannelSelect from "./AppChannelSelect";
 import { appLoaderHeight } from "./consts";
 import createMenuStructure from "./menuStructure";
 import { isMenuActive } from "./utils";
+import {Sidebar} from "@saleor/components/Sidebar";
 
 const useStyles = makeStyles(
   theme => ({

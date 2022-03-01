@@ -1,10 +1,8 @@
-import backgroundArt from "@assets/images/login-background.svg";
-import saleorDarkLogo from "@assets/images/logo-dark.svg";
-import saleorLightLogo from "@assets/images/logo-light.svg";
-import { useTheme } from "@saleor/macaw-ui";
+// import backgroundArt from "@assets/images/login-background.svg";
+import MainLogo from "@assets/images/mainicon.png";
+import backgroundArt from "@assets/images/rose-perfums.jpg";
 import { makeStyles } from "@saleor/macaw-ui";
 import React from "react";
-import SVG from "react-inlinesvg";
 
 const useStyles = makeStyles(
   theme => ({
@@ -43,7 +41,7 @@ const useStyles = makeStyles(
         gridTemplateColumns: "376px 1fr"
       },
       "@media (min-width: 1440px)": {
-        gridTemplateColumns: "520px 1fr"
+        gridTemplateColumns: "730px 1fr"
       },
       display: "grid",
       gridTemplateColumns: "1fr",
@@ -72,20 +70,25 @@ const Layout: React.FC = props => {
   const { children } = props;
 
   const classes = useStyles(props);
-  const { themeType } = useTheme();
 
-  return (
+    return (
     <div className={classes.root}>
       <div className={classes.sidebar}>
-        <SVG className={classes.sidebarArt} src={backgroundArt} />
+        {/* <SVG className={classes.sidebarArt} src={backgroundArt} />*/}
+          <img className={classes.sidebarArt} src={backgroundArt} alt={'backgroundArt'}/>
+
       </div>
       <div className={classes.mainPanel}>
         <div className={classes.mainPanelContent}>
-          <SVG
-            className={classes.logo}
-            src={themeType === "dark" ? saleorDarkLogo : saleorLightLogo}
-          />
-          {children}
+          {/* <SVG*/}
+          {/*  className={classes.logo}*/}
+          {/*  // src={themeType === "dark" ? saleorDarkLogo : saleorLightLogo}*/}
+          {/*  src={MainLogo}*/}
+
+          {/*/ >*/}
+            <img className={classes.logo} src={MainLogo} alt={'MainLogo'}/>
+
+            {children}
         </div>
       </div>
     </div>
